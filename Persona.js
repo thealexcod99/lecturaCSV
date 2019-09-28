@@ -7,6 +7,7 @@ module.exports = class Persona {
     this.sexo = sexo
   }
 
+  //Todo esto en js es totalmente innecesario 
   get nombre() {
     return this.nombre
   }
