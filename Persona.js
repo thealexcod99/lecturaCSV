@@ -8,37 +8,37 @@ module.exports = class Persona {
   }
 
   //Todo esto en js es totalmente innecesario 
-  get nombre() {
-    return this.nombre
-  }
+  // get nombre() {
+  //   return this.nombre
+  // }
 
-  set nombre(value) {
-    this.nombre = value
-  }
+  // set nombre(value) {
+  //   this.nombre = value
+  // }
 
-  get apellido() {
-    return this.apellido
-  }
+  // get apellido() {
+  //   return this.apellido
+  // }
 
-  set apellido(value) {
-    this.apellido = value
-  }
+  // set apellido(value) {
+  //   this.apellido = value
+  // }
 
-  get email() {
-    return this.email
-  }
+  // get email() {
+  //   return this.email
+  // }
 
-  set email(value) {
-    this.email = value
-  }
+  // set email(value) {
+  //   this.email = value
+  // }
 
-  get sexo() {
-    return this.sexo
-  }
+  // get sexo() {
+  //   return this.sexo
+  // }
 
-  set sexo(value) {
-    this.sexo = value
-  }
+  // set sexo(value) {
+  //   this.sexo = value
+  // }
 
   toString() {
     return "Nombre: " + this.nombre + "Apellido: " + this.apellido + "email:" + this.email + "sexo: " + this.sexo

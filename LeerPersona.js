@@ -3,7 +3,7 @@
 
 
 const fs = require('fs')
-const Persona = require('./Persona.js')
+const Persona = require('./Persona')
 
 //console.log(process.argv)
 
@@ -13,10 +13,9 @@ if (!process.argv[2]) {
 }
 
 let ruta = process.argv[2]
-let datos
 let lineasCSV
 let personaCSV
-let listaPersonas
+let listaPersonas=[]
 
 
 fs.readFile(ruta, 'utf-8', (err, data) => {
@@ -24,29 +23,22 @@ fs.readFile(ruta, 'utf-8', (err, data) => {
     console.log('No existe el archivo')
     process.exit(2)
   }
-  datos = data  
-  separarPersonas()
+  
+  lineasCSV = data.split('\n')
+  
+  for (let i=1; i < lineasCSV.length -1; i++) {
+    personaCSV = lineasCSV[i].split(',')
+    let persona = new Persona(personaCSV[0], personaCSV[1], personaCSV[2], personaCSV[3])
+    listaPersonas.push(persona)
+  }
+  
+  for (let i=0; i < listaPersonas.length; i++){
+    console.log(listaPersonas[i])
+  }
+  
 })
 
-function separarPersonas() {
-  lineasCSV = datos.split('\n')
-  console.log(typeof(lineasCSV))
-  //let persona = new Persona()
-  // for (let i=1; i < lineasCSV.size()-1; i++) {
-  //   personaCSV = lineasCSV[i].split(',')
 
-    // persona.nombre = personaCSV[0]
-    // persona.apellido = personaCSV[1]
-    // persona.email = personaCSV[2]
-    // persona.sexo = personaCSV[3]
-  
-    // listaPersonas.push(persona)
-  //}
-  
-  // for (let i=0; i < listaPersonas.size(); i++){
-  //   console.log(listaPersonas[i])
-  // }
-}
 
 
 
