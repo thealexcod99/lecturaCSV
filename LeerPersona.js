@@ -33,7 +33,7 @@ fs.readFile(ruta, 'utf-8', (err, data) => {
   }
   
   for (let i=0; i < listaPersonas.length; i++){
-    console.log(listaPersonas[i])
+    console.log(listaPersonas[i].toString())
   }
   
 })

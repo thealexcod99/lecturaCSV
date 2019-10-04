@@ -41,6 +41,6 @@ module.exports = class Persona {
   // }
 
   toString() {
-    return "Nombre: " + this.nombre + "Apellido: " + this.apellido + "email:" + this.email + "sexo: " + this.sexo
+    return "Nombre: " + this.nombre + ", Apellido: " + this.apellido + ", email: " + this.email + ", sexo: " + this.sexo
   }
 }
